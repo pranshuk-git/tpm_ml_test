@@ -1,11 +1,25 @@
 # Team Process Mapping Take-Home Task: [YOUR NAME HERE].
 
-Goal: In this pre-test, you will implement a feature extractor that detects sentiment from team conversations. Specifically, given an input of conversation data, you should output: (1) a sentiment label of ‘positive,’ ‘negative,’ or ‘neutral,’ alongside a score for each label, from 0-1. You will run your feature extractor on a dataset of team jury conversations.
+Goal: In this pre-test, you will first read brief selections from two social science papers (Step 1). You will then go through an end-to-end implementation of a feature and apply it to a dataset of team conversations (Step 2). Finally, you will write a reflection on how well you think this feature extractor performed on the data, as well as how well it performs in operationalizing social science constructs (Step 3).
 
-You will then write a reflection on how well you think this feature extractor performed on the data. Please write your reflection in this README document.
+The idea behind this task is to give you a flavor of the scope of our work — to show how we take inspiration from social science, then apply these ideas in a computational way.
 
-## 1. What method(s) did you choose?
-In 1-2 sentences each, describe your sentiment analysis method(s).
+Please write your reflection in this README document.
+
+## 1. High-Level Questions
+1a. Which dataset did you choose?
+
+> [YOUR ANSWER]
+
+1b. What method(s) did you choose? In 1-2 sentences each, describe your sentiment analysis method(s).
+
+> [YOUR ANSWER]
+
+1c. Does your method capture any of the ideas from Troth et al. and West et al.? If so, which ones?
+
+> [YOUR ANSWER]
+
+1d. Compared to how Troth et al. and West et al. measured positivity, what are some strengths and weaknesses of your approach?
 
 > [YOUR ANSWER]
 
@@ -24,7 +38,7 @@ Next, we would like you to consider how you would evaluate your method. How do y
 
 > [YOUR ANSWER]
 
-2d. (OPTIONAL) Implement your proposed steps in 2b, using the DynaSent benchmark dataset (https://github.com/cgpotts/dynasent). Choose the Round 2 test dataset (“Sentences crowdsourced using Dynabench”). Evaluate the model using benchmarks you have proposed, and briefly comment on the quality of your performance.
+2d. Given the nature of these datasets, what challenges do you anticipate that you may encounter during evaluation? How would you go about resolving them?
 
 > [YOUR ANSWER]
 
