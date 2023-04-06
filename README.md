@@ -26,7 +26,7 @@ Please write your reflection in this README document.
 ## 2. Method evaluation
 Next, we would like you to consider how you would evaluate your method. How do you know the classification or quantification of emotion is “right?” Try to think critically!
 
-2a. Open up output/jury_output_chat_level.csv and look at the columns you generated. Do the values “make sense” intuitively? Why or why not?
+2a. Open up your output CSV and look at the columns you generated. Do the values “make sense” intuitively? Why or why not?
 
 > [YOUR ANSWER]
 
