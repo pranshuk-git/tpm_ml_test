@@ -63,7 +63,7 @@ class FeatureBuilder:
         Deriving the base conversation level dataframe.
         Set Conversation Data around `conversation_num` once preprocessing completes.
         """        
-        self.conv_data = self.chat_data.groupby(["conversation_num"]).nth(0).reset_index().iloc[: , :1]
+        self.conv_data = self.chat_data.groupby(["conversation_num"]).nth(0).reset_index().iloc[: , :2]
 
 
     def merge_conv_data_with_original(self) -> None:
