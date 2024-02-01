@@ -5,7 +5,9 @@ from transformers import AutoModelForSequenceClassification
 from transformers import AutoTokenizer, AutoConfig
 import numpy as np
 from scipy.special import softmax
+import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+nltk.download('vader_lexicon')
 
 MODEL = f"cardiffnlp/twitter-roberta-base-sentiment-latest"
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
@@ -18,14 +20,9 @@ tokenizer.save_pretrained(MODEL)
 def get_sentiment(text):
     result = {}
     if os.environ['model_name'] == "VADER" :
-        print("Model is VADER")
         sid = SentimentIntensityAnalyzer()
         sentiment_scores = sid.polarity_scores(text)
-        total_score = sum(sentiment_scores.values())
-        positive_prob = sentiment_scores['pos'] / total_score
-        negative_prob = sentiment_scores['neg'] / total_score
-        neutral_prob = sentiment_scores['neu'] / total_score
-        result = {'positive': positive_prob, 'negative': negative_prob, 'neutral': neutral_prob}
+        result = {'positive': sentiment_scores['pos'] , 'negative': sentiment_scores['neg'] , 'neutral': sentiment_scores['neu']}
 
     #Using Hugging Face
     elif os.environ['model_name'] == "ROBERTA":
