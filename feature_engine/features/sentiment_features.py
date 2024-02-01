@@ -24,7 +24,7 @@ def get_sentiment(text):
         sentiment_scores = sid.polarity_scores(text)
         result = {'positive': sentiment_scores['pos'] , 'negative': sentiment_scores['neg'] , 'neutral': sentiment_scores['neu']}
 
-    #Using Hugging Face
+    #Using Hugging Face Sample Code -> https://huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment
     elif os.environ['model_name'] == "ROBERTA":
         encoded_input = tokenizer(text, return_tensors='pt')
         output = model(**encoded_input)
