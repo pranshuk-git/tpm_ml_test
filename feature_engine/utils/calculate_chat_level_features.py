@@ -60,4 +60,8 @@ class ChatLevelFeaturesCalculator:
 		"""
 			This function is where your sentiment function will be called.
 		"""
-		self.chat_data["sentiment"] = self.chat_data["message"].apply(get_sentiment)
+		sentiment = self.chat_data["message"].apply(get_sentiment)
+		self.chat_data['sentiment'] = sentiment
+		self.chat_data['positive_sentiment'] = sentiment.apply(lambda x : x['positive'])
+		self.chat_data['negative_sentiment'] = sentiment.apply(lambda x : x['negative'])
+		self.chat_data['neutral_sentiment'] = sentiment.apply(lambda x : x['neutral'])
