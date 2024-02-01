@@ -28,11 +28,11 @@ if __name__ == "__main__":
 
 	jury_feature_builder.featurize(col="message")
 
-	# # CSOP
-	# csop_feature_builder = FeatureBuilder(
-	# 	input_file_path = "../feature_engine/data/raw_data/csopII_conversations_withblanks.csv",
-	# 	output_file_path_chat_level = "../feature_engine/output/csopII_output_chat_level.csv",
-	# 	output_file_path_conv_level = "../feature_engine/output/csopII_output_conversation_level.csv"
-	# )
+	# CSOP
+	csop_feature_builder = FeatureBuilder(
+		input_file_path = "../feature_engine/data/raw_data/csopII_conversations_withblanks.csv",
+		output_file_path_chat_level = "../feature_engine/output/csopII_output_chat_level.csv",
+		output_file_path_conv_level = "../feature_engine/output/csopII_output_conversation_level.csv"
+	)
 
 	csop_feature_builder.featurize(col="message")
